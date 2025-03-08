@@ -1,15 +1,11 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/autoplay";
-
-import imgOne from "../assets/marvice/Brand Logos/img-1.png";
-import imgTwo from "../assets/marvice/Brand Logos/img-2.png";
-import imgThree from "../assets/marvice/Brand Logos/img-3.png";
-import imgFour from "../assets/marvice/Brand Logos/img-4.png";
-import imgFive from "../assets/marvice/Brand Logos/img-5.png";
-import imgSix from "../assets/marvice/Brand Logos/img-6.png";
+import { motion } from "framer-motion";
+import imgOne from "../assets/marvice/Brand Logos/image 1.png";
+import imgTwo from "../assets/marvice/Brand Logos/image 2.png";
+import imgThree from "../assets/marvice/Brand Logos/image 3.png";
+import imgFour from "../assets/marvice/Brand Logos/image 4.png";
+import imgFive from "../assets/marvice/Brand Logos/image 5.png";
+import imgSix from "../assets/marvice/Brand Logos/image 6.png";
 
 const logos = [
   { id: 1, img: imgOne },
@@ -22,30 +18,32 @@ const logos = [
 
 const Brands = () => {
   return (
-    <div className="py-10 text-center px-10">
-      <h1 className="text-[2.5rem] text-[#162340] font-semibold">
-        Trusted by Leading Brands & Institutions
-      </h1>
-
-      {/* Swiper Carousel */}
-      <Swiper
-        breakpoints={{
-          640: { slidesPerView: 3 }, // On small screens, show 3 logos
-          768: { slidesPerView: 4 }, // On tablets, show 4 logos
-          1024: { slidesPerView: 4}, // On desktops, show 6 logos
-        }}
-        spaceBetween={10}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        loop={true}
-        modules={[Autoplay]}
-        className="mt-10"
+    <div className="py-10 text-center">
+      {/* Heading Animation */}
+      <motion.h1
+        className="text-[2.5rem] font-semibold"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
+        Trusted by Leading Brands & Institutions
+      </motion.h1>
+
+      {/* Logos Grid */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 px-[2.5rem] gap-5 mt-10">
         {logos.map((data) => (
-          <SwiperSlide key={data.id} className="flex flex-row justify-center">
-            <img src={data.img} alt="brand" className="h-[140px] w-[400px] object-fit" />
-          </SwiperSlide>
+          <motion.div
+            key={data.id}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="flex justify-center"
+          >
+            <img src={data.img} alt="brand" className="h-[100px] w-auto object-contain" />
+          </motion.div>
         ))}
-      </Swiper>
+      </div>
     </div>
   );
 };

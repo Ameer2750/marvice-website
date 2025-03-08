@@ -5,7 +5,7 @@ import arrow from "../assets/marvice/Icons/arrow-right.svg"
 const Hero = () => {
   return (
     <div className='relative top-10'>
-      <img src={hero} alt='hero-image' className='w-full  ' />
+      <img src={hero} alt='hero-image' className='w-full min-h-screen object-fit  ' />
       {/* <div className='absolute bg-[#16234066]/40 -top-96 translate-x-56  rounded-full p-[32rem] '></div> */}
       {/* hero content  */}
       <div className='container mx-auto'>
