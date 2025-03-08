@@ -23,9 +23,9 @@ const Hero = () => {
           </div>
           <button className="cursor-pointer flex flex-row items-center mt-10 justify-between gap-5 px-4  py-1   rounded-full  bg-gradient-to-r from-[#E7603F] to-[#3B2AAA]"><span className='text-white'>Get Start Now</span><img src={arrow} alt='arrow' className='bg-white rounded-full p-[7px] translate-x-2' /></button>
         </div>
-        <div className='absolute  bg-[#16234066]/40 -top-40 translate-x-32 left-0 rounded-full p-[32.2rem] '></div>
+        <div className='absolute  bg-[#16234066]/80 -top-40 translate-x-32 left-0 rounded-full p-[32.2rem] '></div>
 
-        <div className='absolute  bg-[#16234066]/50 -top-13 translate-x-44 left-10 rounded-full p-[26.2rem] '></div>
+        <div className='absolute  bg-[#16234066]/60  -top-13 translate-x-44 left-10 rounded-full p-[26.2rem] '></div>
       </div>
     </div>
   )
