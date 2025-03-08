@@ -24,7 +24,7 @@ const About = () => {
                 <p className='text-[#8F99AC] leading-8 text-[1.25rem]'>Marvice Media Pvt Ltd, founded in 2017, is a prominent digital solutions provider with three specialized brands. Leveraging advanced technology, creative insights, and strategic approaches, we excel in delivering innovative digital services that enhance growth and innovation across various industries. Our commitment spans all business scales, ensuring impactful solutions tailored to each client's unique needs.</p>
                 <div className='flex flex-wrap  items-center gap-5'>
 
-                    <button className='flex flex-row gap-2 bg-[#162340] text-[1.2rem] rounded-full text-white py-4 px-20'><span>Learn More About Us</span> <img src={arrow} alt='arrow' className='text-white w-[20px]' /></button>
+                    <button className='flex flex-row gap-2 bg-[#162340] text-[1.2rem] rounded-full text-white py-4 px-20 cursor-pointer'><span>Learn More About Us</span> <img src={arrow} alt='arrow' className='text-white w-[20px]' /></button>
                     <span className='flex flex-row gap-2 font-semibold text-[1.2rem] text-end'><img src={phone} alt='' />80562 91930</span>
                 </div>
                 <div className='grid grid-cols-2 mt-5'>
