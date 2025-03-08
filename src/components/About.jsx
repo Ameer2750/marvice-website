@@ -9,7 +9,7 @@ import time from "../assets/marvice/Icons/Frame 19.png"
 
 const About = () => {
     return (
-        <div className='py-20  container mx-auto md:grid grid-cols-2 gap-[1.75rem] px-[2.5rem]'>
+        <div id='about-us' className='py-20  container mx-auto md:grid grid-cols-2 gap-[1.75rem] px-[2.5rem]'>
             <div className=''>
                 <img src={imageOne} alt='image-one' className='rounded-xl w-[900px] h-[291px]' />
                 <div className='grid grid-cols-2 gap-5 mt-5 '>
