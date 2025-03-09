@@ -9,10 +9,9 @@ import time from "../assets/marvice/Icons/Frame 19.png"
 
 const About = () => {
     return (
-        <div className='container mx-auto '>
-            <div className='w-full max-w-[1162px]  flex justify-center'>
+        <div className=' w-full '>
+            <div className=' container mx-auto '>
                 <div id='about-us' className='py-20 flex flex-row items-center justify-between gap-[28px] '>
-
                     {/* Left Section - Images (50%) */}
                     <div className='flex flex-col gap-[28px] basis-1/2'>
                         <div className='w-full'>

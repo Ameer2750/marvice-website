@@ -76,7 +76,7 @@ const TabComponent = () => {
 
 
     return (
-        <div id="services" className=" py-24 mx-10 overflow-hidden bg-[#0E1831] container mx-auto">
+        <div id="services" className=" py-24  overflow-hidden bg-[#0E1831] container mx-auto">
 
             <div className="relative flex flex-row items-start   justify-between gap-10 text-white  w-full   ">
                 <div> <h1 className="absolute text-[1.25rem]  translate-x-14 bg-gradient-to-r from-[#1B2948]  to-[#1B2948]/10 rounded-2xl px-2 py-1">Our Innovative Brands</h1></div>
