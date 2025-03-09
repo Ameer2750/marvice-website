@@ -35,8 +35,8 @@ import { useRef } from "react";
 
 const tabs = [
     { id: "1", label: "Onscreens", content: "Onscreens helps businesses thrive in the digital age with expert branding, marketing, and development solutions. We craft strategies that drive engagement, growth, and success." },
-    { id: "2", label: "Worxforu", content: "Worxforu focuses on creating impactful marketing strategies and business growth techniques." },
-    { id: "3", label: "Conxyou", content: "Conxyou provides advanced technology solutions to enhance your digital presence and customer experience." }
+    { id: "2", label: "Worxforu", content: "Worxforu builds powerful software solutions that streamline business operations and enhance efficiency. From automation to custom development, we turn ideas into innovation." },
+    { id: "3", label: "Conxyou", content: "Conxyou specializes in corporate gifting, packaging, and public relations to elevate brand presence. We craft meaningful connections through thoughtful solutions." }
 ];
 
 const cardData = {
@@ -84,7 +84,6 @@ const TabComponent = () => {
                 <img src={img} alt="" className="absolute rotate-290 -left-92 -top-20  w-[700px]" />
 
                 <div className="flex flex-row space-x-6 mt-14 ">
-
                     {tabs.map((tab) => (
                         <button
                             key={tab.id}
@@ -128,68 +127,58 @@ const TabComponent = () => {
                 <h3 className="text-[3rem] translate-x-10 font-semibold">We Provide a variety of Services</h3>
             </div>
             {/* cards */}
-            <div className="relative container mx-auto sm:pb-0"
-
+            <div className="relative  container mx-auto sm:pb-0"
             >
 
-                {/* Custom Navigation Buttons */}
-                <button
-                    className="lg:block cursor-pointer hidden absolute md:left-0 left-0 -bottom-10 translate-y-1/2   bg-white  p-4 rounded-full"
-                    id="hero-prev"
-                >
-                    <IoIosArrowBack className={`${isPrevActive ? " " : ""}`} />
-                </button>
-                <button
-                    className="lg:block cursor-pointer hidden absolute left-14  -bottom-10 z-10 translate-y-1/2  bg-white    p-4 rounded-full"
-                    id="hero-next"
-                >
-                    <IoIosArrowForward className={`${isNextActive ? "" : ""}`} />
-                </button>
-                <Swiper
-                    ref={swiperRef}
+                <div className="pl-10">
+                    {/* Custom Navigation Buttons */}
+                    <button
+                        className="lg:block cursor-pointer hidden absolute md:left-10 left-14 -bottom-10 translate-y-1/2   bg-white  p-4 rounded-full"
+                        id="hero-prev"
+                    >
+                        <IoIosArrowBack className={`${isPrevActive ? " " : ""}`} />
+                    </button>
+                    <button
+                        className="lg:block cursor-pointer hidden absolute left-24  -bottom-10 z-10 translate-y-1/2  bg-white    p-4 rounded-full"
+                        id="hero-next"
+                    >
+                        <IoIosArrowForward className={`${isNextActive ? "" : ""}`} />
+                    </button>
+                    <Swiper
+                        ref={swiperRef}
+                        modules={[Navigation, Pagination]}
+                        spaceBetween={28}
+                        slidesPerView={3}
+                        navigation={{
+                            nextEl: "#hero-next",
+                            prevEl: "#hero-prev",
+                        }}
+                        breakpoints={{
+                            320: { slidesPerView: 1 },
+                            768: { slidesPerView: 2 },
+                            1024: { slidesPerView: 3.5 },
+                        }}
+                        className="mt-5 container   "
+                    >
+                        {cardData[activeTab].map((data) => (
+                            <SwiperSlide key={data.id}>
+                                <div className="relative w-full max-w-[369px] mx-auto">
+                                    <img
+                                        src={data.image}
+                                        alt={data.title}
+                                        className="h-[443px] w-full rounded-lg opacity-80 object-cover"
+                                    />
+                                    <p className="absolute bottom-5 left-5 text-lg font-semibold text-white">
+                                        {data.title}
+                                    </p>
+                                    <IoIosArrowForward className="cursor-pointer bg-white rounded-full text-gray-500 text-[2rem] p-2 absolute bottom-4 right-8 translate-x-1/2" />
+                                </div>
+                            </SwiperSlide>
 
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={10}
-                    slidesPerView={3}
-                    navigation={{
-                        nextEl: "#hero-next",
-                        prevEl: "#hero-prev",
-                    }}
-                    // onSlideChange={(swiper) => {
-                    //     setIsPrevActive(swiper.activeIndex > 0);
-                    //     setIsNextActive(swiper.activeIndex < swiper.slides.length - 4);
-                    // }}
-                    breakpoints={{
-                        320: { slidesPerView: 1 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 4.5 },
-                    }}
-                    className="mt-5 container "
-                >
-                    {cardData[activeTab].map((data) => (
-                        <SwiperSlide key={data.id}>
-                            <div className="relative">
-                                <img
-                                    src={data.image}
-                                    alt={data.title}
-                                    className="h-[320px] w-[270px] rounded-lg opacity-80 object-cover"
-                                />
-                                <p className="absolute bottom-5 left-5 text-lg font-semibold text-white">
-                                    {data.title}
-                                </p>
-                                <IoIosArrowForward className="cursor-pointer bg-white rounded-full text-gray-500 text-[2rem] p-2 absolute bottom-4 right-2" />
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
-            {/* <div className="flex flex-row items-center gap-4 mt-10 container mx-auto ">
-                <IoIosArrowBack className="bg-white rounded-full text-gray-500 text-[2.5rem] p-2"/>
-                <IoIosArrowForward className="bg-white rounded-full text-gray-500 text-[2.5rem] p-2"/>
-            </div> */}/
-
-
-
+                        ))}
+                    </Swiper>
+                </div>
+            </div>  
         </div>
     );
 };
