@@ -12,7 +12,7 @@ const Menu = [
 
 const Navbar = () => {
   return (
-    <div className='px-[2.5rem] py-[1.2rem] shadow fixed z-10 top-0 left-0 right-0 bg-white'>
+    <div className='px-[2.5rem] py-[1.2rem] shadow fixed z-50 top-0 left-0 right-0 bg-white'>
       <div className='flex flex-row items-center justify-between container mx-auto'>
         {/* Logo */}
         <a href='#'>
