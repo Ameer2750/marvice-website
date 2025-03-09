@@ -73,10 +73,10 @@ const Testimonial = () => {
 
       {/* Navigation Buttons */}
       <div className="absolute top-[650px] left-1/2 transform -translate-x-1/2 flex gap-6">
-        <button className="prev-btn bg-[#DDDAF7] text-[#4230D3] cursor-pointer px-6 py-3 rounded-full font-semibold text-lg">
+        <button className="prev-btn bg-[#DDDAF7] text-[#4230D3] cursor-pointer px-3 py-3 rounded-full font-semibold text-lg">
           <IoIosArrowBack  />
         </button>
-        <button className="next-btn bg-[#DDDAF7] text-[#4230D3] cursor-pointer px-6 py-3 rounded-full font-semibold text-lg">
+        <button className="next-btn bg-[#DDDAF7] text-[#4230D3] cursor-pointer px-3 py-3 rounded-full font-semibold text-lg">
           <IoIosArrowForward />
         </button>
       </div>
