@@ -35,7 +35,7 @@ const OurImpact = () => {
     return (
         <div className="bg-[#F4F4FB] w-full py-20 ">
             <div className="container mx-auto">
-                <div className="flex flex-col md:flex-row justify-between gap-14 items-center">
+                <div className="flex flex-col md:flex-row justify-between gap-14 items-center mx-14">
                     {/* Left Content */}
                     <div className="flex flex-col gap-5 md:w-1/2">
                         <h1 className="text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4FB] rounded-full px-4 py-2">
