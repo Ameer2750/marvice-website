@@ -35,14 +35,14 @@ const Brands = () => {
           1024: { slidesPerView: 4}, // On desktops, show 6 logos
         }}
         spaceBetween={10}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 100, disableOnInteraction: false }}
         loop={true}
         modules={[Autoplay]}
         className="mt-10 container mx-auto"
       >
         {logos.map((data) => (
           <SwiperSlide key={data.id} className="flex flex-row justify-center">
-            <img src={data.img} alt="brand" className="h-[140px] w-[400px] object-fit" />
+            <img src={data.img} alt="brand" className="h-[140px] w-[200px] object-fit" />
           </SwiperSlide>
         ))}
       </Swiper>

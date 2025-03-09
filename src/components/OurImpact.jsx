@@ -8,11 +8,11 @@ const OurImpact = () => {
 
                 <div className='flex flex-col gap-5 items-start'>
                     <h1 className='text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2'>Our Impact in Numbers</h1>
-                    <h2 className='text-[#162340] text-[3rem] font-semibold'>Empowering Businesses with Cutting-Edge Digital Solutions.</h2>
+                    <h2 className='text-[#162340] text-[2.5rem] font-semibold'>Empowering Businesses with Cutting-Edge Digital Solutions.</h2>
                     <p className='text-[#8F99AC] text-[1.25rem]'>At Marvice, we are committed to delivering top-tier digital solutions that drive real results. Our dedication to excellence is reflected in our key achievements.</p>
 
                 </div>
-                <div className='flex flex-col  md:items-end justify-evenly  -translate-x-5  text-center'>
+                <div className='flex flex-col  md:items-end justify-evenly   text-center'>
                     <div className='flex md:flex-row  flex-col md:gap-20'>
                         <div>
                             <h3 className='text-[4rem] font-bold text-[#242E45]'>2017</h3>  <span className="bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] h-[10px] w-full block -mt-6 "></span>

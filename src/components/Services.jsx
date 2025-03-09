@@ -76,7 +76,7 @@ const TabComponent = () => {
 
 
     return (
-        <div id="services" className="bg-[#0E1831] py-20 px-5 overflow-hidden">
+        <div id="services" className="bg-[#0E1831] py-20 mx-10 overflow-hidden">
 
             <div className="relative flex flex-row items-start container  justify-between gap-10 text-white  w-full  mx-auto">
                 <div> <h1 className="absolute text-[1.25rem]  translate-x-14 bg-gradient-to-r from-[#1B2948]  to-[#1B2948]/10 rounded-2xl px-2 py-1">Our Innovative Brands</h1></div>
@@ -164,7 +164,7 @@ const TabComponent = () => {
                         768: { slidesPerView: 2 },
                         1024: { slidesPerView: 4.5 },
                     }}
-                    className="mt-5 container"
+                    className="mt-5 container "
                 >
                     {cardData[activeTab].map((data) => (
                         <SwiperSlide key={data.id}>
@@ -172,7 +172,7 @@ const TabComponent = () => {
                                 <img
                                     src={data.image}
                                     alt={data.title}
-                                    className="h-[320px] w-[270px] rounded-lg opacity-80"
+                                    className="h-[320px] w-[270px] rounded-lg opacity-80 object-cover"
                                 />
                                 <p className="absolute bottom-5 left-5 text-lg font-semibold text-white">
                                     {data.title}
