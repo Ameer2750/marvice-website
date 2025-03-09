@@ -30,7 +30,7 @@ const cardData = [
 
 const Testimonial = () => {
   return (
-    <div className="relative">
+    <div className="relative container mx-auto py-14">
       <img src={testimonial} alt="testimonial" />
       <div className="flex flex-col justify-center items-center container mx-auto">
         <h1 className="absolute top-28 text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2">
