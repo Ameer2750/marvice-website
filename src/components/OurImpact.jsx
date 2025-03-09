@@ -1,6 +1,8 @@
 import React from 'react';
 import CountUp from 'react-countup';
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 const statsData = [
     {
         value: 2017,
@@ -32,25 +34,31 @@ const statsData = [
 ];
 
 const OurImpact = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Animation runs only once
+        });
+    }, []);
     return (
         <div className="bg-[#F4F4FB] w-full py-20 ">
             <div className="container mx-auto">
                 <div className="flex flex-col md:flex-row justify-between gap-14 items-center mx-14">
                     {/* Left Content */}
                     <div className="flex flex-col gap-5 md:w-1/2">
-                        <h1 className="text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4FB] rounded-full px-4 py-2">
+                        <h1  data-aos="fade-up" className="text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4FB] rounded-full px-4 py-2">
                             Our Impact in Numbers
                         </h1>
-                        <h2 className="text-[#162340] text-[3rem] font-semibold leading-tight">
+                        <h2  data-aos="fade-left" className="text-[#162340] text-[3rem] font-semibold leading-tight">
                             Empowering Businesses with Cutting-Edge Digital Solutions.
                         </h2>
-                        <p className="text-[#8F99AC] text-[1.25rem] leading-[36px]">
+                        <p  data-aos="fade-left" className="text-[#8F99AC] text-[1.25rem] leading-[36px]">
                             At Marvice, we are committed to delivering top-tier digital solutions that drive real results. Our dedication to excellence is reflected in our key achievements.
                         </p>
                     </div>
 
                     {/* Right Content */}
-                    <div className="grid grid-cols-2 md:w-1/2  mt-10 md:mt-0">
+                    <div   data-aos="fade-right" className="grid grid-cols-2 md:w-1/2  mt-10 md:mt-0">
                         {statsData.map((stat, index) => (
                             <div key={index} className="flex flex-col items-start">
                                 <h3 className="text-[4.625rem] font-bold text-[#242E45]">

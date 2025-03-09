@@ -3,7 +3,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import testimonial from "../assets/marvice/Background Abstracts/world Map.png";
 import client from "../assets/marvice/testimonial/Ellipse 3.png";
 import arrow from "../assets/marvice/testimonial/Frame 53.png";
@@ -29,14 +31,20 @@ const cardData = [
 ];
 
 const Testimonial = () => {
+   useEffect(() => {
+              AOS.init({
+                  duration: 1000, // Animation duration in milliseconds
+                  once: true, // Animation runs only once
+              });
+          }, []);
   return (
     <div className="relative container mx-auto py-14">
       <img src={testimonial} alt="testimonial" />
       <div className="flex flex-col justify-center items-center container mx-auto">
-        <h1 className="absolute top-28 text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2">
+        <h1  data-aos="fade-up"  className="absolute top-28 text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2">
           Testimonial
         </h1>
-        <h2 className="absolute top-44 text-center text-[3rem] leading-12 font-semibold text-[#162340]">
+        <h2  data-aos="fade-up"  className="absolute top-44 text-center text-[3rem] leading-12 font-semibold text-[#162340]">
           Trusted by the world's fastest growing companies
         </h2>
       </div>

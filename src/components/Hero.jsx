@@ -20,24 +20,24 @@ const Hero = () => {
         {/* Content (Now Vertically Centered) */}
         <div className="relative text-white flex flex-col items-center text-center max-w-4xl px-5 z-10">
           {/* Rating */}
-          <div className="flex items-center gap-2  px-4 py-2 ">
+          <div data-aos="fade-up" className="flex items-center gap-2  px-4 py-2 ">
             <img src={star} alt="star" className="w-5 h-5" />
-            <span className="text-[1.25rem] font-semibold">5.0</span>
+            <span  className="text-[1.25rem] font-semibold">5.0</span>
             <span className="text-[1.25rem]">High Rating Reviews</span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-[4.625rem] max-w-[560px] sm:text-5xl md:text-6xl font-semibold leading-tight mt-4">
+          <h1 data-aos="fade-up" className="text-[4.625rem] max-w-[560px] sm:text-5xl md:text-6xl font-semibold leading-tight mt-4">
             We Provide Digital Solutions
           </h1>
 
           {/* Description */}
-          <p className="text-[1.25rem] sm:text-xl mt-4 max-w-3xl leading-[26px] text-light">
+          <p data-aos="fade-up" className="text-[1.25rem] sm:text-xl mt-4 max-w-3xl leading-[26px] text-light">
             Onscreens is your gateway to mastering the digital landscape. We transform businesses with compelling branding, strategic marketing, and cutting-edge development solutions.
           </p>
 
           {/* Button */}
-          <button className="mt-8 flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#E7603F] to-[#3B2AAA] hover:scale-105 transition">
+          <button data-aos="fade-up" className="mt-8 flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-[#E7603F] to-[#3B2AAA] hover:scale-105 transition">
             <span className="text-white">Get Started Now</span>
             <img
               src={arrow}
