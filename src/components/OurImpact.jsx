@@ -5,20 +5,23 @@ import CountUp from 'react-countup'
 const statsData = [
     {
         value: 2017,
+        startValue: 0,
         label: "Year of Establishment",
         duration: 2,
         isAnimated: false, // Year is static, no animation
     },
     {
         value: 500,
+        startValue: 450,
         label: "customers worldwide",
-        duration: 3,
+        duration: 0.5,
         isAnimated: true, // Animated counter
     },
     {
         value: 6,
+        startValue: 0,
         label: "Countries with active client base",
-        duration: 3,
+        duration: 0.5,
         isAnimated: true,
     },
     {
@@ -34,7 +37,7 @@ const OurImpact = () => {
     return (
         <div className='bg-[#F4F4FB] w-full my-14 '>
             <div className=' container mx-auto'>
-                <div className='flex flex-row justify-between items-center gap-[127px] max-w-[1161px]  py-20'>
+                <div className='flex flex-row justify-between items-center gap-[140px] max-w-[1161px]  py-20'>
                     <div className='flex flex-col gap-5 items-start w-full '>
                         <h1 className='text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2'>Our Impact in Numbers</h1>
                         <h2 className='text-[#162340] text-[3rem] font-semibold'>Empowering Businesses with Cutting-Edge Digital Solutions.</h2>
@@ -46,7 +49,7 @@ const OurImpact = () => {
                                 <div key={index}>
                                     <h3 className="text-[4.625rem] font-bold text-[#242E45]">
                                         {stat.isAnimated ? (
-                                            <CountUp start={0} end={stat.value} duration={stat.duration} separator="," />
+                                            <CountUp start={stat.startValue} end={stat.value} duration={stat.duration} separator="," />
                                         ) : (
                                             stat.value
                                         )}
