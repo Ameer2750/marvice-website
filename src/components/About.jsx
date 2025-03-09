@@ -9,54 +9,50 @@ import time from "../assets/marvice/Icons/Frame 19.png"
 
 const About = () => {
     return (
-        <div className='container mx-auto w-full'>
+        <div className='container mx-auto '>
+            <div className='w-full max-w-[1162px]  flex justify-center'>
+                <div id='about-us' className='py-20 flex flex-row items-center justify-between gap-[28px] '>
 
-            <div className=' max-w-[1162px]  px-5 flex justify-center'>
-                <div
-                    id='about-us'
-                    className='py-20 flex flex-row items-center justify-center gap-10 '
-                >
-
-                    {/* Left Section - Images */}
-                    <div className='flex flex-col gap-[28px] w-[568px] h-[691px]'>
-                        <img
-                            src={imageOne}
-                            alt='image-one'
-                            className='rounded-[32px] w-full h-[331.5px] object-cover'
-                        />
+                    {/* Left Section - Images (50%) */}
+                    <div className='flex flex-col gap-[28px] basis-1/2'>
+                        <div className='w-full'>
+                            <img
+                                src={imageOne}
+                                alt='image-one'
+                                className='rounded-[32px] w-full h-[331.5px] object-cover'
+                            />
+                        </div>
                         <div className='grid grid-cols-2 gap-[28px]'>
                             <img
                                 src={imageTwo}
                                 alt='image-two'
-                                className='rounded-xl w-full h-[291px] object-cover'
+                                className='rounded-xl w-full h-[331.5px] object-cover'
                             />
                             <img
                                 src={imageThree}
                                 alt='image-three'
-                                className='rounded-xl w-full h-[291px] object-cover'
+                                className='rounded-xl w-full h-[331.5px] object-cover'
                             />
                         </div>
                     </div>
 
-                    {/* Right Section - Text Content */}
-                    <div className='flex flex-col gap-[32px] w-[566px] h-[683px] justify-center'>
+                    {/* Right Section - Text Content (50%) */}
+                    <div className='flex flex-col gap-[32px] basis-1/2 justify-center w-full'>
                         <h1 className='text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-4 py-2 inline-block'>
                             Creative Approach
                         </h1>
-                        <h2 className='text-[3rem] leading-tight font-semibold text-[#162340]'>
+                        <h2 className='text-[40px] leading-[64px] font-semibold text-[#162340] w-full'>
                             Choose The Best Digital Service Company
                         </h2>
-                        <p className='text-[#8F99AC] leading-8 text-[1.25rem]'>
-                            Marvice Media Pvt Ltd, founded in 2017, is a prominent digital solutions provider with three specialized brands.
-                            Leveraging advanced technology, creative insights, and strategic approaches, we excel in delivering innovative
-                            digital services that enhance growth and innovation across various industries.
+                        <p className='text-[#8F99AC] leading-[36px] text-[1rem]'>
+                            Marvice Media Pvt Ltd, founded in 2017, is a prominent digital solutions provider with three specialized brands. Leveraging advanced technology, creative insights, and strategic approaches, we excel in delivering innovative digital services that enhance growth and innovation across various industries. Our commitment spans all business scales, ensuring impactful solutions tailored to each client's unique needs.
                         </p>
 
                         {/* Buttons and Contact */}
                         <div className='flex flex-wrap items-center gap-5'>
-                            <button className='flex flex-row items-center gap-2 bg-[#162340] text-[1.2rem] rounded-full text-white py-4 px-10 cursor-pointer hover:scale-105 transition'>
-                                <span>Learn More About Us</span>
-                                <img src={arrow} alt='arrow' className='text-white w-5' />
+                            <button className='flex flex-row items-center gap-2 bg-[#162340] rounded-full text-white py-4 px-10 cursor-pointer hover:scale-105 transition'>
+                                <span className='text-[1.2rem] leading-[100%]'>Learn More About Us</span>
+                                <img src={arrow} alt='arrow' className='text-white w-5 text-[1.2rem] ' />
                             </button>
                             <span className='flex flex-row items-center gap-2 font-semibold text-[1.2rem]'>
                                 <img src={phone} alt='phone' /> 80562 91930
@@ -75,9 +71,9 @@ const About = () => {
                     </div>
 
                 </div>
+
             </div>
         </div>
-
     )
 }
 
