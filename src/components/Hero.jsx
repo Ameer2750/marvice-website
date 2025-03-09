@@ -6,7 +6,7 @@ import arrow from "../assets/marvice/Icons/arrow-right.svg";
 const Hero = () => {
   return (
     <div className="container mx-auto  overflow-hidden mt-20">
-      <div className="relative   h-screen flex items-center justify-center ">
+      <div className="relative   h-screen max-h-[1000px] flex items-center justify-center ">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
