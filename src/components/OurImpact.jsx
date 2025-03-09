@@ -11,16 +11,16 @@ const statsData = [
     },
     {
         value: 500,
-        startValue: 450,
+        startValue: 1,
         label: "customers worldwide",
-        duration: 0.5,
+        duration: 3,
         isAnimated: true,
     },
     {
         value: 6,
         startValue: 0,
         label: "Countries with active client base",
-        duration: 0.5,
+        duration: 3,
         isAnimated: true,
     },
     {
