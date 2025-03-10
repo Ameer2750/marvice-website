@@ -10,7 +10,7 @@ import Testimonial from '../components/Testimonial'
 
 const Home = () => {
     return (
-        <main className='overflow-x-hidden w-full h-auto'>
+        <main className='overflow-hidden w-full h-auto'>
             <Hero/>
             <OurImpact/>
             <About/>

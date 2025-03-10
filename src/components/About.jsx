@@ -17,9 +17,9 @@ const About = () => {
         });
     }, []);
     return (
-        <div className=' w-full '>
+        <div  id='about-us' className=' w-full '>
             <div className=' container mx-auto '>
-                <div id='about-us' className='py-20 flex flex-row items-center justify-between gap-[28px]'>
+                <div className='py-20 md:px-0 px-5 flex md:flex-row flex-col items-center justify-between gap-[28px] '>
                     {/* Left Section - Images (50%) */}
                     <div  data-aos="fade-up" className='flex flex-col gap-[28px] basis-1/2'>
                         <div className='w-full'>
@@ -55,17 +55,17 @@ const About = () => {
                             Marvice Media Pvt Ltd, founded in 2017, is a prominent digital solutions provider with three specialized brands. Leveraging advanced technology, creative insights, and strategic approaches, we excel in delivering innovative digital services that enhance growth and innovation across various industries. Our commitment spans all business scales, ensuring impactful solutions tailored to each client's unique needs.
                         </p>
                         {/* Buttons and Contact */}
-                        <div data-aos="fade-up" className='flex flex-wrap items-center gap-5'>
-                            <button className='flex flex-row items-center gap-2 bg-[#162340] rounded-full text-white py-4 px-10 cursor-pointer hover:scale-105 transition'>
-                                <span className='text-[1.2rem] leading-[100%]'>Learn More About Us</span>
-                                <img src={arrow} alt='arrow' className='text-white w-5 text-[1.2rem] ' />
+                        <div data-aos="fade-up" className='flex  md:flex-wrap  flex-row items-center gap-5'>
+                            <button className='flex flex-row items-center gap-2 bg-[#162340] rounded-full text-white py-4 md:px-10 px-2 cursor-pointer hover:scale-105 transition'>
+                                <span className='md:text-[1.2rem] text-[0.9rem] leading-[100%]'>Learn More About Us</span>
+                                <img src={arrow} alt='arrow' className='text-white w-5  ' />
                             </button>
-                            <span className='flex flex-row items-center gap-2 font-semibold text-[1.2rem]'>
+                            <span className='flex flex-row items-center gap-2 font-semibold md:text-[1.2rem] text-[0.8rem]'>
                                 <img src={phone} alt='phone' /> 80562 91930
                             </span>
                         </div>
                         {/* Benefits */}
-                        <div data-aos="fade-up" className='grid grid-cols-2 gap-5 mt-5'>
+                        <div data-aos="fade-up" className='grid md:grid-cols-2 grid-cols-1 gap-5 mt-5'>
                             <span className='flex flex-row items-center gap-2 text-[1rem] text-[#242E45]'>
                                 <img src={money} alt='money' /> We Can Save Your Money
                             </span>

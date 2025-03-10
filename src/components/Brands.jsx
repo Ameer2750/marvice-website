@@ -10,8 +10,8 @@ const logos = [imgOne, imgTwo, imgThree, imgFour, imgFive, imgSix];
 
 const Brands = () => {
   return (
-    <div className="py-10 text-center px-10 overflow-hidden container mx-auto">
-      <h1 className="text-[2.5rem] text-[#162340] font-semibold">
+    <div className="md:py-10 py-5 text-center md:px-10 overflow-hidden container mx-auto">
+      <h1 className="md:text-[2.5rem] text-[1.8rem] text-[#162340] font-semibold">
         Trusted by Leading Brands & Institutions
       </h1>
 

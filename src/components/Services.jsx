@@ -76,10 +76,10 @@ const TabComponent = () => {
 
 
     return (
-        <div id="services" className=" py-24  overflow-hidden bg-[#0E1831] container mx-auto">
+        <div id="services" className=" py-24 px-5 overflow-hidden bg-[#0E1831] container mx-auto">
 
-            <div className="relative flex flex-row items-start   justify-between gap-10 text-white  w-full   ">
-                <div> <h1 className="absolute text-[1.25rem]  translate-x-10 bg-gradient-to-r from-[#1B2948]  to-[#1B2948]/10 rounded-2xl px-2 py-1">Our Innovative Brands</h1></div>
+            <div className="relative flex md:flex-row flex-col items-start   justify-between gap-10 text-white  w-full   ">
+                <div> <h1 className="absolute text-[1.25rem]  md:translate-x-10 bg-gradient-to-r from-[#1B2948]  to-[#1B2948]/10 rounded-2xl px-2 py-1">Our Innovative Brands</h1></div>
                 {/* Tabs */}
                 <img src={img} alt="" className="absolute rotate-290 -left-92 -top-20  w-[700px]" />
 
@@ -88,7 +88,7 @@ const TabComponent = () => {
                         <button
                             key={tab.id}
                             onClick={() => setActiveTab(tab.id)}
-                            className={`relative text-lg cursor-pointer font-semibold text-[2.25rem] transition ${activeTab === tab.id ? "text-white" : "text-[#6C7382]"
+                            className={`relative  cursor-pointer font-semibold md:text-[2.25rem] text-[1.3rem] transition ${activeTab === tab.id ? "text-white" : "text-[#6C7382]"
                                 }`}
                         >
                             {tab.label}
@@ -106,7 +106,7 @@ const TabComponent = () => {
                 </div>
 
                 {/* Content */}
-                <div className="mt-16">
+                <div className="md:mt-16">
                     {tabs.map((tab) =>
                         activeTab === tab.id ? (
                             <motion.p
@@ -124,22 +124,22 @@ const TabComponent = () => {
 
             </div>
             <div className="text-white mt-10 container mx-auto">
-                <h3 className="text-[3rem] translate-x-10 font-semibold">We Provide a variety of Services</h3>
+                <h3 className="md:text-[3rem] text-[2rem] md:translate-x-10 font-semibold">We Provide a variety of Services</h3>
             </div>
             {/* cards */}
             <div className="relative  container mx-auto sm:pb-0"
             >
 
-                <div className="pl-10">
+                <div className="md:pl-10  px-5">
                     {/* Custom Navigation Buttons */}
                     <button
-                        className="lg:block cursor-pointer hidden absolute md:left-10 left-14 -bottom-10 translate-y-1/2   bg-white  p-4 rounded-full"
+                        className="lg:block cursor-pointer  absolute md:left-10 left-28  -bottom-10 translate-y-1/2   bg-white  p-4 rounded-full"
                         id="hero-prev"
                     >
                         <IoIosArrowBack className={`${isPrevActive ? " " : ""}`} />
                     </button>
                     <button
-                        className="lg:block cursor-pointer hidden absolute left-24  -bottom-10 z-10 translate-y-1/2  bg-white    p-4 rounded-full"
+                        className="lg:block cursor-pointer  absolute md:left-24 left-48  -bottom-10 z-10 translate-y-1/2  bg-white    p-4 rounded-full"
                         id="hero-next"
                     >
                         <IoIosArrowForward className={`${isNextActive ? "" : ""}`} />

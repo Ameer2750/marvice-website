@@ -31,10 +31,10 @@ const Growth = () => {
             });
         }, []);
     return (
-        <div className='py-14  w-full'>
+        <div className='md:py-14 py-10  w-full md:px-0 px-5'>
             <div className='container mx-auto'>
-                <div className='flex flex-row gap-[28px] justify-between  '>
-                    <img  data-aos="fade-right" src={growth} alt='growth' className='w-[665px] h-[766.31px] object-contain' />
+                <div className='flex md:flex-row flex-col gap-[28px] justify-between  '>
+                    <img  data-aos="fade-right" src={growth} alt='growth' className='w-[665px] md:h-[766.31px] [800px] object-contain' />
                     <div className='flex flex-col items-start gap-2 '>
                         <h1  data-aos="fade-up" className='text-[#4230D3] text-[1rem] font-semibold bg-gradient-to-r from-[#D9D6F6] to-[#F4F4Fb] rounded-full px-2 py-2'>
                             Why Choose Us
